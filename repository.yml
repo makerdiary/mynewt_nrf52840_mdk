@@ -1,0 +1,6 @@
+repo.name: mynewt_nrf52840_mdk
+repo.versions:
+    "0.0.0": "master"
+
+    "0-latest": "master"
+    "0-dev": "0.0.0"        # master
