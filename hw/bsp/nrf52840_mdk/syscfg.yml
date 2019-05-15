@@ -23,60 +23,6 @@ syscfg.defs:
         description: 'Set to indicate that BSP has NRF52840'
         value: 1
 
-    UART_0:
-        description: 'Whether to enable UART0'
-        value:  1
-    UART_0_PIN_TX:
-        description: 'TX pin for UART0'
-        value:  20
-    UART_0_PIN_RX:
-        description: 'RX pin for UART0'
-        value:  19
-    UART_0_PIN_RTS:
-        description: 'RTS pin for UART0'
-        value:  -1
-    UART_0_PIN_CTS:
-        description: 'CTS pin for UART0'
-        value: -1
-
-    UART_1:
-        description: 'Whether to enable UART1'
-        value:  0
-    UART_1_PIN_TX:
-        description: 'TX pin for UART1'
-        value:  -1
-    UART_1_PIN_RX:
-        description: 'RX pin for UART1'
-        value:  -1
-    UART_1_PIN_RTS:
-        description: 'RTS pin for UART1'
-        value:  -1
-    UART_1_PIN_CTS:
-        description: 'CTS pin for UART1'
-        value: -1
-
-    TIMER_0:
-        description: 'NRF52840 Timer 0'
-        value:  1
-    TIMER_1:
-        description: 'NRF52840 Timer 1'
-        value:  0
-    TIMER_2:
-        description: 'NRF52840 Timer 2'
-        value:  0
-    TIMER_3:
-        description: 'NRF52840 Timer 3'
-        value:  0
-    TIMER_4:
-        description: 'NRF52840 Timer 4'
-        value:  0
-    TIMER_5:
-        description: 'NRF52 RTC 0'
-        value:  0
-    PWM_3:
-        description: 'NRF52 PWM 3'
-        value: 0
-
 syscfg.defs.BLE_LP_CLOCK:
     TIMER_0:
         value: 0
@@ -84,6 +30,9 @@ syscfg.defs.BLE_LP_CLOCK:
         value: 1
 
 syscfg.vals:
+    MCU_TARGET: nrf52840
+    UART_0_PIN_TX: 20
+    UART_0_PIN_RX: 19
     CONFIG_FCB_FLASH_AREA: FLASH_AREA_NFFS
     REBOOT_LOG_FLASH_AREA: FLASH_AREA_REBOOT_LOG
     NFFS_FLASH_AREA: FLASH_AREA_NFFS
@@ -99,7 +48,6 @@ syscfg.vals:
     QSPI_PIN_DIO1: 36
     QSPI_PIN_DIO2: 34
     QSPI_PIN_DIO3: 33
-
 
 syscfg.vals.BLE_LP_CLOCK:
     OS_CPUTIME_FREQ: 32768
