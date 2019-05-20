@@ -23,12 +23,6 @@ syscfg.defs:
         description: 'Set to indicate that BSP has NRF52840'
         value: 1
 
-syscfg.defs.BLE_LP_CLOCK:
-    TIMER_0:
-        value: 0
-    TIMER_5:
-        value: 1
-
 syscfg.vals:
     MCU_TARGET: nrf52840
     UART_0_PIN_TX: 20
@@ -38,7 +32,7 @@ syscfg.vals:
     NFFS_FLASH_AREA: FLASH_AREA_NFFS
     COREDUMP_FLASH_AREA: FLASH_AREA_IMAGE_1
     MCU_DCDC_ENABLED: 1
-    XTAL_32768: 1
+    MCU_LFCLK_SOURCE: LFXO
     QSPI_FLASH_SECTOR_SIZE: 4096
     QSPI_FLASH_PAGE_SIZE: 256
     QSPI_FLASH_SECTOR_COUNT: 4096
@@ -48,8 +42,12 @@ syscfg.vals:
     QSPI_PIN_DIO1: 36
     QSPI_PIN_DIO2: 34
     QSPI_PIN_DIO3: 33
+    BLE_LL_OUR_SCA: '50'
+    BLE_LL_MASTER_SCA: 5
 
-syscfg.vals.BLE_LP_CLOCK:
+syscfg.vals.BLE_CONTROLLER:
+    TIMER_0: 0
+    TIMER_5: 1
     OS_CPUTIME_FREQ: 32768
     OS_CPUTIME_TIMER_NUM: 5
     BLE_XTAL_SETTLE_TIME: 1500
